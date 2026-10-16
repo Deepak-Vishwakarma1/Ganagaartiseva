@@ -1,0 +1,96 @@
+.about-page {
+  flex: 1;
+  background: #fff;
+  color: #65717a;
+}
+
+.about-content {
+  width: min(100% - 48px, 1080px);
+  margin: 0 auto;
+  padding: 52px 0 82px;
+}
+
+.about-intro {
+  display: grid;
+  gap: 22px;
+  margin-bottom: 52px;
+}
+
+.about-intro p,
+.about-list p {
+  color: #667483;
+  font-size: 1.1rem;
+  line-height: 1.7;
+}
+
+.about-section { margin-top: 48px; }
+.about-section h2 {
+  margin: 0 0 21px;
+  color: #17354a;
+  font-size: clamp(1.45rem, 2.6vw, 1.8rem);
+  font-weight: 780;
+  letter-spacing: -0.025em;
+}
+
+.about-list {
+  display: grid;
+  gap: 16px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.about-list li { position: relative; padding-left: 24px; }
+.about-list li::before {
+  position: absolute;
+  top: 0.8em;
+  left: 0;
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
+  background: #df690f;
+  content: "";
+}
+.about-list strong { color: #17354a; font-weight: 780; }
+
+.about-list--steps { gap: 17px; }
+.about-list--steps li { display: grid; grid-template-columns: 31px 1fr; align-items: start; gap: 13px; padding-left: 0; }
+.about-list--steps li::before { display: none; }
+.about-step-number {
+  display: grid;
+  width: 30px;
+  height: 30px;
+  place-items: center;
+  border-radius: 50%;
+  background: #df690f;
+  color: #fff;
+  font-size: 0.88rem;
+  font-weight: 800;
+  line-height: 1;
+}
+
+.about-section--last { margin-bottom: 48px; }
+.about-closing {
+  border-top: 1px solid #e8c9ad;
+  padding-top: 29px;
+  color: #17354a;
+  font-size: 1.2rem;
+  font-weight: 780;
+  line-height: 1.5;
+}
+
+.about-closing strong { color: #d95e09; }
+
+@media (max-width: 600px) {
+  .about-content { width: min(100% - 36px, 560px); padding: 38px 0 52px; }
+  .about-intro { gap: 17px; margin-bottom: 38px; }
+  .about-intro p, .about-list p { font-size: 0.98rem; line-height: 1.62; }
+  .about-section { margin-top: 37px; }
+  .about-section h2 { margin-bottom: 16px; }
+  .about-list { gap: 14px; }
+  .about-list li { padding-left: 20px; }
+  .about-list--steps li { grid-template-columns: 28px 1fr; gap: 10px; padding-left: 0; }
+  .about-step-number { width: 28px; height: 28px; }
+  .about-section--last { margin-bottom: 36px; }
+  .about-closing { padding-top: 23px; }
+}
